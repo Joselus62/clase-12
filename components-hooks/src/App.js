@@ -1,29 +1,31 @@
-import logo from './logo.svg';
-import Movies from './movies/movies';
-import Contador from './Contador';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import ImageList from './components/imageList/ImageList';
+import { Container} from 'react-bootstrap';
+import Movies from './movies/Movies';
 
-const myData = [
-  { Framework: "Boostrap"} ,
-  { Framework: "Material"} ,
-  { Framework: "Tailwind"} ,
-  { Framework: "Next"}
+const myData=[
+  {Framework:"Bootstrap"},
+  {Framework:"Material"},
+  {Framework:"Tailwind"},
+  {Framework:"Next"}
 ]
 
 function App() {  
 
-  const myDataList = myData.map( (element) => {
-        return ( <h2> { element.Framework } </h2> )
-    } );
+  const myDataList = myData.map ( (element) => {
+    return ( <h2>{ element.Framework }</h2>)
+  });
 
   return (
-    <div className="App">
-      <Contador></Contador>
-      <Movies data={myDataList}>
-        <h1> Hello World!</h1>
+    <Container fluid className="App">
+      <Movies data={ myDataList }>
+        <h1> Hello Word!</h1>
         <h1> From React Children!</h1>
       </Movies>
-    </div>
+      <h1>Listado de imágenes</h1>
+      <ImageList />      
+    </Container>
   );
 }
 
