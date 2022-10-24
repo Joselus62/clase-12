@@ -10,7 +10,7 @@ const myData = [
   { Framework: "Next"}
 ]
 
-function App() {
+function App() {  
 
   const myDataList = myData.map( (element) => {
         return ( <h2> { element.Framework } </h2> )
