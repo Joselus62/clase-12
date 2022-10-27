@@ -3,6 +3,7 @@ import './App.css';
 import ImageList from './components/imageList/ImageList';
 import { Container} from 'react-bootstrap';
 import Movies from './movies/Movies';
+import Contador from './Contador'
 
 const myData=[
   {Framework:"Bootstrap"},
@@ -19,8 +20,9 @@ function App() {
 
   return (
     <Container fluid className="App">
+      <Contador></Contador>
       <Movies data={ myDataList }>
-        <h1> Hello Word!</h1>
+        <h1> Hello World!</h1>
         <h1> From React Children!</h1>
       </Movies>
       <h1>Listado de imágenes</h1>
